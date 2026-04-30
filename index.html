@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🍄 LDS皮克敏群 - 系統載入中</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      color: #333;
+      text-align: center;
+    }
+    .loader {
+      border: 8px solid #e7f5ff;
+      border-top: 8px solid #4dabf7;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    h2 { color: #495057; margin-bottom: 5px;}
+    p { color: #868e96; font-size: 0.95rem;}
+    .manual-link { color: #4dabf7; text-decoration: none; font-weight: bold;}
+    .manual-link:hover { text-decoration: underline; }
+  </style>
+  <script>
+    // ⬇️ 每次只要修改雙引號裡面的這串 Apps Script 網址即可！ ⬇️
+    const LATEST_GAS_URL = "https://script.google.com/macros/s/AKfycbxKLX-mJz6tnW2DGGqIkosw-AqBubyTQMzY1hTizxA6x8_yruGODAacNDDfE0z2MWbkDA/exec";
+    // ⬆️ 每次只要修改雙引號裡面的這串 Apps Script 網址即可！ ⬆️
+
+    window.onload = function() {
+      // 設定 1 秒的視覺緩衝，讓使用者知道正在進入系統，隨後自動跳轉
+      setTimeout(function() {
+        window.location.replace(LATEST_GAS_URL);
+      }, 1000); 
+    };
+  </script>
+</head>
+<body>
+  <div class="loader"></div>
+  <h2>🍄 LDS皮克敏群</h2>
+  <p>正在為您連線至最新版本的系統，請稍候...</p>
+  
+  <p style="font-size: 0.8rem; margin-top: 30px;">
+    如果畫面沒有自動跳轉，請 <a href="javascript:void(0)" onclick="window.location.replace(LATEST_GAS_URL)" class="manual-link">點擊此處手動進入</a>
+  </p>
+</body>
+</html>
